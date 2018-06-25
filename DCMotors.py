@@ -7,3 +7,6 @@ Output Pis = [17,22,25,26]
 
 for items in Outputs:
     GPIO.setup(items,GPIO.OUT)
+    GPIO.output(items,True)
+    time.sleep(25)
+    GPIO.cleanup()
