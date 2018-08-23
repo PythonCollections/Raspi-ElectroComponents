@@ -15,16 +15,18 @@ time.sleep(0.1)
 print("Measurement Starting")
 
 GPIO.output(Trigger,1)
+print("Triggered Start, Lets Wait")
 time.sleep(0.00001)
 GPIO.output(Trigger,0)
+print("Triggered Done")
 
 while GPIO.input(Echo) == 0:
     pass
-start = time.time()
+    start = time.time()
 
 while GPIO.input(Echo) == 1:
     pass
-stop = time.time()
+    stop = time.time()
 
 print ((stop - start * 170))
 
